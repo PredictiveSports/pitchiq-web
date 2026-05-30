@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+:root {
+  --bg-0: oklch(0.13 0.005 250);
+  --bg-1: oklch(0.16 0.006 250);
+  --bg-2: oklch(0.20 0.007 250);
+  --bg-3: oklch(0.25 0.008 250);
+
+  --stroke-1: oklch(1 0 0 / 0.06);
+  --stroke-2: oklch(1 0 0 / 0.10);
+  --stroke-3: oklch(1 0 0 / 0.16);
+
+  --fg-0: oklch(0.98 0 0);
+  --fg-1: oklch(0.78 0.005 250);
+  --fg-2: oklch(0.58 0.006 250);
+  --fg-3: oklch(0.42 0.006 250);
+
+  --accent: oklch(0.74 0.155 230);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-0);
+  color: var(--fg-0);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Inter", system-ui, sans-serif;
+  letter-spacing: -0.01em;
+  overflow-x: hidden;
+}
+
+/* Ambient field glow */
+.ambient {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 40% at 78% 8%, oklch(0.74 0.155 230 / 0.12), transparent 70%),
+    radial-gradient(50% 38% at 12% 26%, oklch(0.78 0.17 145 / 0.06), transparent 70%);
+}
+
+/* Simple single-screen layout */
+.simple {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 24px 0;
+}
+
+.simple-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 680px;
+  margin: auto;
+}
+
+/* App icon */
+.simple-brand img {
+  width: 92px;
+  height: 92px;
+  border-radius: 21px;
+  box-shadow: 0 18px 50px -16px rgb(0 0 0 / 0.8);
+  outline: 0.5px solid var(--stroke-2);
+  outline-offset: -0.5px;
+  margin-bottom: 34px;
+}
+
+/* Eyebrow */
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 26px;
+}
+
+.eyebrow .tick {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* Title */
+.simple-title {
+  font-size: clamp(46px, 8vw, 92px);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.grad-accent {
+  background: linear-gradient(100deg, oklch(0.82 0.16 230), oklch(0.84 0.14 200));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Lead text */
+.simple-lead {
+  font-size: clamp(17px, 1.7vw, 21px);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--fg-1);
+  margin: 26px 0 0;
+  max-width: 520px;
+  text-wrap: pretty;
+}
+
+/* App Store button */
+.simple-cta {
+  margin-top: 40px;
+}
+
+.btn-store {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 22px 13px 18px;
+  border-radius: 16px;
+  background: var(--fg-0);
+  color: var(--bg-0);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 12px 34px -12px rgb(0 0 0 / 0.7);
+}
+
+.btn-store:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 44px -12px rgb(0 0 0 / 0.8);
+}
+
+.btn-store .glyph {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2.5px;
+}
+
+.btn-store .glyph i {
+  background: var(--bg-0);
+  border-radius: 2.5px;
+  display: block;
+  font-style: normal;
+}
+
+.btn-store .glyph i.lit {
+  background: oklch(0.74 0.155 230);
+}
+
+.store-txt {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-align: left;
+}
+
+.store-txt small {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  opacity: 0.62;
+}
+
+.store-txt b {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 3px;
+}
+
+/* Coming soon note */
+.simple-note {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+  font-size: 13px;
+  color: var(--fg-2);
+  letter-spacing: 0.01em;
+}
+
+.simple-note .dotline {
+  width: 30px;
+  height: 0.5px;
+  background: var(--stroke-3);
+}
+
+/* Contact link */
+.simple-contact {
+  margin-top: 44px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--fg-2);
+  border-bottom: 0.5px solid var(--stroke-3);
+  padding-bottom: 3px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  text-decoration: none;
+}
+
+.simple-contact:hover {
+  color: var(--fg-0);
+  border-color: var(--fg-2);
+}
+
+/* Footer */
+.simple-footer {
+  padding: 40px 0 28px;
+  font-size: 12.5px;
+  color: var(--fg-3);
+}
