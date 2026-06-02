@@ -12,9 +12,18 @@ export const metadata: Metadata = {
       "The training tool that helps catchers and pitchers think one pitch ahead — powered by real game data.",
     siteName: "PitchIQ",
     type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "PitchIQ — Read the game. Call the pitch.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/og.png"],
   },
 };
 
