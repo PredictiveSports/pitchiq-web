@@ -17,11 +17,6 @@ export default function Home() {
             />
           </div>
 
-          <div className="eyebrow">
-            <span className="tick" />
-            iOS &middot; For Catchers &amp; Pitchers
-          </div>
-
           <h1 className="simple-title">
             Read the game.
             <br />
