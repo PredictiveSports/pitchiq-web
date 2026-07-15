@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Repowise (generated index + local MCP config)
+.repowise/
+.mcp.json
