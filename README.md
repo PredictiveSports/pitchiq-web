@@ -13,6 +13,11 @@ Live at [pitchiq.predictivesports.io](https://pitchiq.predictivesports.io)
 | `/support` | Support URL filed in App Store Connect (required, must stay reachable)  |
 | `/privacy` | Privacy Policy URL filed in App Store Connect (required)                |
 | `/terms`   | Terms of Service — linked from the in-app paywall and sign-up screen    |
+| `/parents` | COPPA notice for parents / Adult Sponsors of under-13 players           |
+
+This site is the **canonical home for PitchIQ legal documents**. The company site
+(`predictivesports-web`) previously served copies at `/pitchiq/privacy|terms|kids-privacy`;
+those routes now redirect here and should not be revived.
 
 `/privacy` and `/terms` are rendered from `src/content/*.md`, which are **copies of
 the documents the iOS app bundles** in

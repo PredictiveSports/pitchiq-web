@@ -68,6 +68,7 @@ export default function Home() {
             <Link href="/support">Support</Link>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
+            <Link href="/parents">For Parents</Link>
           </nav>
           <span>&copy; 2026 Predictive Sports, LLC</span>
         </footer>

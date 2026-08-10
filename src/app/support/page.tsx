@@ -150,11 +150,9 @@ const FAQS: { q: string; a: React.ReactNode }[] = [
         controls it, and the child plays under a non-identifying handle. We
         collect no personal information from the child and no analytics on
         under-13 accounts. Parents and guardians can review, correct, or delete
-        that information at any time; see{" "}
-        <Link href="/privacy#14-information-for-parents-and-adult-sponsors">
-          Information for Parents and Adult Sponsors
-        </Link>{" "}
-        in our Privacy Policy, or write to{" "}
+        that information at any time; see our{" "}
+        <Link href="/parents">notice for parents and guardians</Link>, or write
+        to{" "}
         <a href="mailto:privacy@predictivesports.io">
           privacy@predictivesports.io
         </a>
@@ -253,6 +251,8 @@ export default function SupportPage() {
           <Link href="/privacy">Privacy Policy</Link>
           <span aria-hidden="true"> · </span>
           <Link href="/terms">Terms of Service</Link>
+          <span aria-hidden="true"> · </span>
+          <Link href="/parents">For Parents</Link>
         </p>
       </div>
     </PageChrome>
