@@ -233,4 +233,269 @@ body {
   padding: 40px 0 28px;
   font-size: 12.5px;
   color: var(--fg-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.simple-footer nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.simple-footer nav a {
+  color: var(--fg-2);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.simple-footer nav a:hover {
+  color: var(--fg-0);
+}
+
+/* ---------------------------------------------------------------
+   Interior pages (legal + support)
+   --------------------------------------------------------------- */
+
+.page {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.page-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 26px 0;
+  border-bottom: 0.5px solid var(--stroke-1);
+}
+
+.page-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  color: var(--fg-0);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.page-brand img {
+  border-radius: 8px;
+  outline: 0.5px solid var(--stroke-2);
+  outline-offset: -0.5px;
+}
+
+.page-eyebrow {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.page-body {
+  flex: 1;
+  padding: 44px 0 64px;
+}
+
+.page-foot {
+  border-top: 0.5px solid var(--stroke-1);
+  padding: 26px 0 34px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font-size: 12.5px;
+  color: var(--fg-3);
+}
+
+.page-foot p {
+  margin: 0;
+}
+
+.page-foot-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.page-foot-nav a {
+  color: var(--fg-2);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.page-foot-nav a:hover {
+  color: var(--fg-0);
+}
+
+/* Document body */
+.doc {
+  color: var(--fg-1);
+  font-size: 15.5px;
+  line-height: 1.68;
+  text-wrap: pretty;
+}
+
+.doc h1 {
+  font-size: clamp(30px, 4.4vw, 40px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--fg-0);
+  margin: 0 0 22px;
+  text-wrap: balance;
+}
+
+.doc h2 {
+  font-size: 19px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: var(--fg-0);
+  margin: 40px 0 12px;
+  scroll-margin-top: 24px;
+}
+
+.doc h3 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--fg-0);
+  margin: 28px 0 8px;
+  scroll-margin-top: 24px;
+}
+
+.doc p {
+  margin: 0 0 16px;
+}
+
+.doc strong {
+  color: var(--fg-0);
+  font-weight: 600;
+}
+
+.doc ul,
+.doc ol {
+  margin: 0 0 16px;
+  padding-left: 22px;
+}
+
+.doc li {
+  margin-bottom: 9px;
+}
+
+.doc li::marker {
+  color: var(--fg-3);
+}
+
+.doc hr {
+  border: none;
+  border-top: 0.5px solid var(--stroke-2);
+  margin: 34px 0;
+}
+
+.doc a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 0.5px solid oklch(0.74 0.155 230 / 0.35);
+  transition: border-color 0.15s ease;
+}
+
+.doc a:hover {
+  border-bottom-color: var(--accent);
+}
+
+.doc-lead {
+  font-size: 17px;
+  color: var(--fg-1);
+  margin-bottom: 28px;
+}
+
+.doc-version,
+.doc-links {
+  margin-top: 34px;
+  font-size: 13px;
+  color: var(--fg-3);
+}
+
+.doc-links a {
+  color: var(--fg-2);
+  text-decoration: none;
+}
+
+.doc-links a:hover {
+  color: var(--fg-0);
+}
+
+/* Support page */
+.contact-card {
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+  margin: 0 0 12px;
+  background: var(--bg-1);
+  border: 0.5px solid var(--stroke-2);
+  border-radius: 16px;
+}
+
+.contact-card > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.contact-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+.contact-card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 15.5px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+.contact-note {
+  margin: 0 !important;
+  font-size: 13px;
+  color: var(--fg-3);
+}
+
+.faq {
+  padding: 20px 0;
+  border-bottom: 0.5px solid var(--stroke-1);
+}
+
+.faq:last-of-type {
+  border-bottom: none;
+}
+
+.faq h3 {
+  margin-top: 0;
+}
+
+.faq p:last-child {
+  margin-bottom: 0;
 }

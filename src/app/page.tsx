@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -29,9 +30,13 @@ export default function Home() {
           </p>
 
           <div className="simple-cta">
+            {/* Disabled until the App Store listing is live; swap for an <a> to
+                the product page at launch. A button that looks tappable but does
+                nothing reads as a broken page to App Review. */}
             <button
               className="btn-store"
               type="button"
+              disabled
               aria-label="Download on the App Store — coming soon"
             >
               <span className="glyph">
@@ -59,7 +64,12 @@ export default function Home() {
         </div>
 
         <footer className="simple-footer">
-          &copy; 2026 Predictive Sports
+          <nav>
+            <Link href="/support">Support</Link>
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
+          </nav>
+          <span>&copy; 2026 Predictive Sports, LLC</span>
         </footer>
       </main>
     </>
