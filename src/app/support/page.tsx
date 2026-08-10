@@ -42,11 +42,27 @@ const FAQS: { q: string; a: React.ReactNode }[] = [
     a: (
       <p>
         Your first session is free. PitchIQ Pro then unlocks unlimited play —
-        every Standard Inning, every High Leverage session, and full 7- or
-        9-inning games in both Game and Coach mode. It&rsquo;s offered as a
-        monthly or annual auto-renewing subscription; the current price and
-        renewal terms are always shown before you confirm a purchase.
+        every Standard Inning and every High Leverage session, with full 3D
+        replay and grading on every pitch. It&rsquo;s offered as a monthly or
+        annual auto-renewing subscription; the current price and renewal terms
+        are always shown before you confirm a purchase.
       </p>
+    ),
+  },
+  {
+    q: "What are the two session modes?",
+    a: (
+      <>
+        <p>
+          <strong>Standard Inning</strong> is a half-inning from a clean slate —
+          three outs to record. It&rsquo;s built for daily reps.
+        </p>
+        <p>
+          <strong>High Leverage</strong> drops you into pressure: runners on,
+          late innings, a tight score. Calls in these spots carry more weight
+          toward your Pitch IQ.
+        </p>
+      </>
     ),
   },
   {
@@ -151,9 +167,9 @@ const FAQS: { q: string; a: React.ReactNode }[] = [
     a: (
       <p>
         No. Every pitch you call is graded by our prediction service, so PitchIQ
-        needs an internet connection. The app shows a banner when you go offline
-        and your in-progress game is saved so you can pick it up when you
-        reconnect.
+        needs an internet connection. The app shows a banner when you go offline.
+        Sessions are saved once you finish them, so it&rsquo;s best to start one
+        when you have a steady connection.
       </p>
     ),
   },
