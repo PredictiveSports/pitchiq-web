@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageChrome } from "../_components/PageChrome";
+import { COACH_SIGNUP_URL } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "For Coaches — PitchIQ",
@@ -9,12 +10,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/coaches" },
 };
 
-/** The team console. Sign-up there is adults only; players join in the app. */
-const START_URL = "https://teams.predictivesports.io/signup/";
-
 /**
- * Annual team plans, as the console's catalog lists them. The console's
- * checkout is the source of truth: change both together.
+ * The launch catalog (`docs/Team-Platform-Backend.md` in the iOS repo), which
+ * the API seeds and Stripe charges. Change them together.
  */
 const PLANS = [
   { name: "Starter", players: 10, price: 199 },
@@ -80,7 +78,7 @@ export default function CoachesPage() {
           decisions are improving.
         </p>
         <div className="coach-cta">
-          <a className="btn-primary" href={START_URL}>
+          <a className="btn-primary" href={COACH_SIGNUP_URL}>
             Start your team
           </a>
           <a className="btn-ghost" href="mailto:hello@predictivesports.io?subject=PitchIQ%20for%20my%20team">
@@ -132,7 +130,8 @@ export default function CoachesPage() {
       <section className="coach-section">
         <h2 className="coach-h2">Team plans</h2>
         <p className="coach-sub">
-          One price per team for the season, billed yearly. Every player on the
+          One price per team, billed yearly, for less per player than a
+          player pays on their own. Every player on the
           roster gets full PitchIQ: unlimited sessions, 3D replay, and grading
           on every pitch. Coaches don&rsquo;t take a seat.
         </p>
@@ -145,6 +144,9 @@ export default function CoachesPage() {
                 <small>/year</small>
               </span>
               <span className="coach-plan-seats">Up to {plan.players} players</span>
+              <span className="coach-plan-each">
+                ${(plan.price / plan.players).toFixed(2)} per player
+              </span>
             </div>
           ))}
         </div>
@@ -180,7 +182,7 @@ export default function CoachesPage() {
           Setup takes a few minutes. Players need an iPhone or iPad.
         </p>
         <div className="coach-cta">
-          <a className="btn-primary" href={START_URL}>
+          <a className="btn-primary" href={COACH_SIGNUP_URL}>
             Start your team
           </a>
         </div>

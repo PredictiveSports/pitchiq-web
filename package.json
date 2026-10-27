@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:alpha": "NEXT_PUBLIC_SITE_ENV=alpha next dev",
     "build": "next build",
+    "build:alpha": "NEXT_PUBLIC_SITE_ENV=alpha next build",
     "start": "next start",
     "lint": "eslint"
   },

@@ -14,6 +14,7 @@ Live at [pitchiq.predictivesports.io](https://pitchiq.predictivesports.io)
 | `/privacy` | Privacy Policy URL filed in App Store Connect (required)                |
 | `/terms`   | Terms of Service — linked from the in-app paywall and sign-up screen    |
 | `/parents` | COPPA notice for parents / Adult Sponsors of under-13 players           |
+| `/coaches` | Team plans for coaches; "Start your team" goes to the team console's sign-up |
 
 This site is the **canonical home for PitchIQ legal documents**. The company site
 (`predictivesports-web`) previously served copies at `/pitchiq/privacy|terms|kids-privacy`;
@@ -40,7 +41,26 @@ npm install
 npm run dev
 ```
 
+The coach buttons point at the team console of the same environment (see
+`src/lib/links.ts`). `npm run dev:alpha` and `npm run build:alpha` build the alpha site:
+an "Alpha" banner, `noindex` and a `robots.txt` that blocks crawlers, and buttons that
+go to `https://teams.alpha.predictivesports.io`. `NEXT_PUBLIC_TEAMS_CONSOLE_URL`
+overrides the console, for one running locally.
+
 ## Deployment
+
+Two sites from one repo:
+
+| Site | Branch | Host | Build |
+|---|---|---|---|
+| `pitchiq.predictivesports.io` (prod) | `main` | GitHub Pages | `npm run build` |
+| `pitchiq.alpha.predictivesports.io` | `alpha` | Cloudflare Pages, project `pitchiq-web-alpha` | `npm run build` with `NEXT_PUBLIC_SITE_ENV=alpha` and `NODE_VERSION=22` |
+
+Push to `alpha` to try a change on the alpha site; merge to `main` to publish it.
+Cloudflare also builds a preview for every other branch at `<branch>.pitchiq-web-alpha.pages.dev`.
+The alpha domain is a Namecheap CNAME `pitchiq.alpha → pitchiq-web-alpha.pages.dev.`
+
+### Prod (GitHub Pages)
 
 Static export (`output: "export"`), deployed to GitHub Pages on push to `main` via
 `.github/workflows/deploy.yml`. `trailingSlash: true` makes the export emit
