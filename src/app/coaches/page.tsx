@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageChrome } from "../_components/PageChrome";
-import { COACH_SIGNUP_URL } from "@/lib/links";
+import { CoachSignupLink } from "../_components/Ref";
 
 export const metadata: Metadata = {
   title: "For Coaches — PitchIQ",
@@ -78,9 +78,7 @@ export default function CoachesPage() {
           decisions are improving.
         </p>
         <div className="coach-cta">
-          <a className="btn-primary" href={COACH_SIGNUP_URL}>
-            Start your team
-          </a>
+          <CoachSignupLink className="btn-primary">Start your team</CoachSignupLink>
           <a className="btn-ghost" href="mailto:hello@predictivesports.io?subject=PitchIQ%20for%20my%20team">
             Talk to us
           </a>
@@ -182,9 +180,7 @@ export default function CoachesPage() {
           Setup takes a few minutes. Players need an iPhone or iPad.
         </p>
         <div className="coach-cta">
-          <a className="btn-primary" href={COACH_SIGNUP_URL}>
-            Start your team
-          </a>
+          <CoachSignupLink className="btn-primary">Start your team</CoachSignupLink>
         </div>
       </section>
     </PageChrome>

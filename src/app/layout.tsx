@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IS_ALPHA } from "@/lib/links";
+import { RefCapture } from "./_components/Ref";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -43,6 +44,7 @@ export default function RootLayout({
             Alpha site for testing. Accounts, teams and payments here aren&rsquo;t real.
           </div>
         )}
+        <RefCapture />
         {children}
       </body>
     </html>
