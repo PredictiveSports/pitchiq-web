@@ -211,9 +211,22 @@ body {
   background: var(--stroke-3);
 }
 
+/* Coaches link */
+.simple-coaches {
+  margin-top: 36px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.simple-coaches:hover {
+  text-decoration: underline;
+}
+
 /* Contact link */
 .simple-contact {
-  margin-top: 44px;
+  margin-top: 22px;
   font-size: 15px;
   font-weight: 500;
   color: var(--fg-2);
@@ -498,4 +511,214 @@ body {
 
 .faq p:last-child {
   margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------------
+   Coaches page
+   --------------------------------------------------------------- */
+
+.coach-hero {
+  padding-bottom: 8px;
+}
+
+.coach-title {
+  font-size: clamp(36px, 6vw, 58px);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.coach-lead {
+  font-size: clamp(16px, 1.6vw, 19px);
+  line-height: 1.55;
+  color: var(--fg-1);
+  margin: 22px 0 0;
+  max-width: 620px;
+  text-wrap: pretty;
+}
+
+.coach-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.btn-primary,
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  height: 46px;
+  padding: 0 22px;
+  border-radius: 12px;
+  font-size: 15.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--fg-0);
+  color: var(--bg-0);
+}
+
+.btn-primary:hover {
+  background: oklch(0.9 0 0);
+}
+
+.btn-ghost {
+  color: var(--fg-0);
+  border: 0.5px solid var(--stroke-3);
+}
+
+.btn-ghost:hover {
+  background: var(--bg-2);
+}
+
+.coach-section {
+  margin-top: 64px;
+}
+
+.coach-h2 {
+  font-size: 24px;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  margin: 0 0 18px;
+}
+
+.coach-sub {
+  color: var(--fg-1);
+  font-size: 15.5px;
+  line-height: 1.6;
+  margin: -6px 0 20px;
+  max-width: 620px;
+}
+
+.coach-card {
+  padding: 20px;
+  background: var(--bg-1);
+  border: 0.5px solid var(--stroke-2);
+  border-radius: 16px;
+}
+
+.coach-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 0 0 6px;
+}
+
+.coach-card p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--fg-1);
+}
+
+.coach-card p + p {
+  margin-top: 12px;
+}
+
+.coach-card a,
+.coach-note a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.coach-card a:hover,
+.coach-note a:hover {
+  text-decoration: underline;
+}
+
+.coach-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+
+.coach-step-n {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--bg-0);
+  background: var(--accent);
+}
+
+.coach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+}
+
+.coach-wide {
+  padding: 24px;
+}
+
+.coach-plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+}
+
+.coach-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.coach-plan-name {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.coach-plan-price {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.coach-plan-price small {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--fg-2);
+  margin-left: 3px;
+  letter-spacing: 0;
+}
+
+.coach-plan-seats {
+  font-size: 14px;
+  color: var(--fg-1);
+}
+
+.coach-note {
+  margin: 16px 0 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--fg-2);
+}
+
+.coach-founding .coach-h2 {
+  margin-bottom: 10px;
+}
+
+.coach-final {
+  padding-top: 8px;
+  border-top: 0.5px solid var(--stroke-1);
+}
+
+.coach-final .coach-h2 {
+  margin-top: 40px;
 }

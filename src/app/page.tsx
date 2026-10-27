@@ -58,6 +58,10 @@ export default function Home() {
             <span className="dotline" />
           </div>
 
+          <Link className="simple-coaches" href="/coaches">
+            Coach a team? See PitchIQ for teams &rarr;
+          </Link>
+
           <a className="simple-contact" href="mailto:hello@predictivesports.io">
             hello@predictivesports.io
           </a>
@@ -65,6 +69,7 @@ export default function Home() {
 
         <footer className="simple-footer">
           <nav>
+            <Link href="/coaches">For Coaches</Link>
             <Link href="/support">Support</Link>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>

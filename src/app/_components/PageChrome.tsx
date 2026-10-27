@@ -33,6 +33,7 @@ export function PageChrome({
         <footer className="page-foot">
           <nav className="page-foot-nav">
             <Link href="/">Home</Link>
+            <Link href="/coaches">For Coaches</Link>
             <Link href="/support">Support</Link>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
